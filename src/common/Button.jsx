@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { TextMedium } from "./TextMedium";
 import telegr from "../assets/telegram1.svg";
 
-const ButtonStyle = styled.button`
+const ButtonStyle = styled.a`
   all: unset;
   cursor: pointer;
   display: flex;
@@ -15,7 +15,7 @@ const ButtonStyle = styled.button`
   background: #1d1d1d;
 `;
 const Img = styled.img`
-  margin: 0 16px;
+  margin: 0px;
 `;
 
 export const Button = ({ width, margin, maXwidth, height }) => {
@@ -25,9 +25,14 @@ export const Button = ({ width, margin, maXwidth, height }) => {
       margin={margin}
       maXwidth={maXwidth}
       height={height}
+      href="https://t.me/tenalponi"
     >
-      <Img src={telegr} />
-      <TextMedium color={"white"}>Связаться со мной</TextMedium>
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <Img src={telegr} />
+        <TextMedium color={"white"} margin={"10px"}>
+          Связаться со мной
+        </TextMedium>
+      </div>
     </ButtonStyle>
   );
 };

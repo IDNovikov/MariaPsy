@@ -5,6 +5,7 @@ import { TextRegular } from "./common/TextRegular";
 import { Header } from "./components/Header";
 import { Intro } from "./components/Intro";
 import { Spec } from "./components/Spec";
+import { Education } from "./components/Educatiom";
 const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family:"Ubuntu medium" ;
@@ -40,6 +41,7 @@ function App() {
         <Header themes={themes} />
         <Intro />
         <Spec />
+        <Education />
       </Wrapper>
     </>
   );
