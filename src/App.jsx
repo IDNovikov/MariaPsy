@@ -2,6 +2,9 @@ import { useState } from "react";
 import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
 import { TextMedium } from "./common/TextMedium";
 import { TextRegular } from "./common/TextRegular";
+import { Header } from "./components/Header";
+import { Intro } from "./components/Intro";
+import { Spec } from "./components/Spec";
 const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family:"Ubuntu medium" ;
@@ -21,34 +24,23 @@ const themes = {
   backround: "#EBEDEE",
   mainBlack: "#1D1D1D",
   blue: "#7AB7FF",
-  listBack: "ECECEC",
+  listBack: "#ECECEC",
 };
 const Wrapper = styled.div`
   width: 100vw;
+  min-height: 100vh;
   height: auto;
+  background-color: #ececec;
 `;
 function App() {
   return (
     <>
       <GlobalStyle />
-      <TextMedium
-        fontSize={28}
-        color={"black"}
-        align={""}
-        margin={""}
-        width={""}
-      >
-        React is working
-      </TextMedium>
-      <TextRegular
-        fontSize={24}
-        color={"black"}
-        align={""}
-        margin={""}
-        width={""}
-      >
-        React is working
-      </TextRegular>
+      <Wrapper>
+        <Header themes={themes} />
+        <Intro />
+        <Spec />
+      </Wrapper>
     </>
   );
 }
