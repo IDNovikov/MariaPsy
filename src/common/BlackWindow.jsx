@@ -4,7 +4,8 @@ export const BlackWindow = styled.div`
   width: 100%;
   height: auto;
   display: flex;
-  flex-direction: column;
+  justify-content: ${(props) => props.content};
+  flex-direction: ${(props) => props.direction};
   align-items: center;
   background-color: #1d1d1d;
   overflow: hidden;

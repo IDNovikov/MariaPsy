@@ -6,6 +6,8 @@ import { Header } from "./components/Header";
 import { Intro } from "./components/Intro";
 import { Spec } from "./components/Spec";
 import { Education } from "./components/Educatiom";
+import { AboutMe } from "./components/AboutMe";
+import { Sale } from "./components/Sale";
 const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family:"Ubuntu medium" ;
@@ -42,6 +44,8 @@ function App() {
         <Intro />
         <Spec />
         <Education />
+        <AboutMe />
+        <Sale />
       </Wrapper>
     </>
   );

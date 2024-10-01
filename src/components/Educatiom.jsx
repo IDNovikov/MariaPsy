@@ -12,7 +12,7 @@ export const Education = () => {
   const windowWidth = useRef(window.innerWidth);
 
   return (
-    <Window margin={"30px 0 "} padding={"0px 16px"}>
+    <Window margin={"30px 0 "} padding={"0px 16px 100px 0"}>
       <TextMedium fontSize={20} align={"center"} margin={"20px 0 "}>
         Образование
       </TextMedium>
@@ -81,7 +81,7 @@ export const Education = () => {
           "Московский институт психологии. Квалификация «психолог-консультант» с дополнительной специализацией «гештальт-терапевт», 1170 часов (2024)"
         }
       />
-      <SliderComp />
+      <SliderComp width={300} margin={"20px 0"} />
     </Window>
   );
 };
