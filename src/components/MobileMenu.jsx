@@ -103,10 +103,9 @@ export const MobileMenu = ({ handleClose }) => {
         margin={"50px 0"}
       ></OrangeButton>
       <Block>
-        {" "}
-        <Link href="https://t.me/tenalponi" imgs={telegr} />
-        <Link href="https://www.b17.ru/lykova28/" imgs={b17} />
         <Link href="https://t.me/tenalponi" imgs={inst} />
+        <Link href="https://www.b17.ru/lykova28/" imgs={b17} />
+        <Link href="https://t.me/tenalponi" imgs={telegr} />
       </Block>
     </Menu>
   );

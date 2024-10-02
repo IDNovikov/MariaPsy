@@ -31,11 +31,13 @@ const GlobalStyle = createGlobalStyle`
 
 const Wrapper = styled.div`
   width: 100vw;
-  min-height: 100vh;
-  height: auto;
+  height: calc(var(--vh, 1vh) * 100);
+  overflow: auto;
   background-color: #ececec;
 `;
 function App() {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty("--vh", `${vh}px`);
   return (
     <>
       <ScrollProvider>

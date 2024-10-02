@@ -14,8 +14,13 @@ const ButtonStyle = styled.a`
   margin: ${(props) => props.margin};
   background: #1d1d1d;
 `;
-const Img = styled.img`
-  margin: 0px;
+const Img = styled.div`
+  width: 25px;
+  height: 25px;
+  background-image: url(${telegr});
+  background-size: contain;
+  background-position: center;
+  margin: 0px 0px 2px 0px;
 `;
 
 export const Button = ({ width, margin, maXwidth, height }) => {
@@ -27,8 +32,14 @@ export const Button = ({ width, margin, maXwidth, height }) => {
       height={height}
       href="https://t.me/tenalponi"
     >
-      <div style={{ display: "flex", justifyContent: "center" }}>
-        <Img src={telegr} />
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Img />
         <TextMedium color={"white"} margin={"10px"}>
           Связаться со мной
         </TextMedium>

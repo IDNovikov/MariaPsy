@@ -20,21 +20,41 @@ const Img = styled.img`
 const Name = styled.img`
   width: 200px;
 `;
+const P = styled.span`
+  display: block;
+  margin-bottom: 5px;
+`;
 
 export const Intro = () => {
   const windowWidth = useRef(window.innerWidth);
-
+  let marginText = "0 30px";
+  let fontSize = 20;
+  let fontLogo = 26;
+  if (windowWidth.current < 430) {
+    marginText = "0 16px";
+  }
+  if (windowWidth.current < 400) {
+    fontSize = 18;
+    fontLogo = 23;
+  }
   return (
     <>
       <div style={{ padding: "50px 0 0 0", position: "relative" }}>
         <Img src={Avatar} />
         <Window margin={"50px auto 20px"} padding={"100px 16px 16px 16px"}>
-          <TextMedium fontSize={20} align={"center"}>
-            Привет! Меня зовут{" "}
-            <TextLogo fontSize={26} color={"#FEA800"}>
-              <i>Мария Новикова</i>
-            </TextLogo>
-            , я дипломированный гештальт-терапевт, помогаю людям бороться с
+          <TextMedium fontSize={fontSize} align={"center"}>
+            <P>Привет!</P>
+            <P>
+              {" "}
+              Меня зовут
+              <TextLogo fontSize={fontLogo} color={"#FEA800"}>
+                <i>Мария Новикова</i>
+              </TextLogo>
+              ,
+            </P>
+          </TextMedium>{" "}
+          <TextMedium fontSize={fontSize} align={"justify"} margin={marginText}>
+            я дипломированный гештальт-терапевт, помогаю людям бороться с
             трудностями и находить в себе ресурсы
           </TextMedium>
           <DropDown marginHeader={"20px 0 10px 0"} />
