@@ -1,13 +1,13 @@
-import { useState } from "react";
-import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
-import { TextMedium } from "./common/TextMedium";
-import { TextRegular } from "./common/TextRegular";
+import React from "react";
+import { ScrollProvider, useScroll } from "./ScrollContext";
+import styled, { createGlobalStyle } from "styled-components";
 import { Header } from "./components/Header";
 import { Intro } from "./components/Intro";
 import { Spec } from "./components/Spec";
 import { Education } from "./components/Educatiom";
 import { AboutMe } from "./components/AboutMe";
 import { Sale } from "./components/Sale";
+
 const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family:"Ubuntu medium" ;
@@ -18,17 +18,17 @@ const GlobalStyle = createGlobalStyle`
     @font-face {
     font-family:"Ubuntu regular" ;
     src: url('/fonts/Ubuntu-Regular.ttf') format('truetype');
-    font-weight: 100;
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family:"Shante regular" ;
+    src: url('/fonts/ShantellSans-Regular.ttf') format('truetype');
+    font-weight: 400;
     font-style: normal;
   }
 `;
 
-const themes = {
-  backround: "#EBEDEE",
-  mainBlack: "#1D1D1D",
-  blue: "#7AB7FF",
-  listBack: "#ECECEC",
-};
 const Wrapper = styled.div`
   width: 100vw;
   min-height: 100vh;
@@ -38,15 +38,17 @@ const Wrapper = styled.div`
 function App() {
   return (
     <>
-      <GlobalStyle />
-      <Wrapper>
-        <Header themes={themes} />
-        <Intro />
-        <Spec />
-        <Education />
-        <AboutMe />
-        <Sale />
-      </Wrapper>
+      <ScrollProvider>
+        <GlobalStyle />
+        <Wrapper>
+          <Header />
+          <Intro />
+          <Spec />
+          <Education />
+          <AboutMe />
+          <Sale />
+        </Wrapper>
+      </ScrollProvider>
     </>
   );
 }

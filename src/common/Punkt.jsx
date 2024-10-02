@@ -10,9 +10,10 @@ const Style = styled.div`
   min-height: ${(props) => props.minHeight}px;
   height: ${(props) => props.height};
   max-width: ${(props) => props.maXwidth}px;
-  margin: 7px 0;
+  margin: ${(props) => props.margin};
   background: ${(props) => props.color};
   border-radius: 8px;
+  /* padding: 3px 20px; */
 `;
 const Img = styled.img`
   margin: 0 16px;

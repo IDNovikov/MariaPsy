@@ -1,18 +1,28 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
 import { Window } from "../common/Window";
 import { TextMedium } from "../common/TextMedium";
 import { TextRegular } from "../common/TextRegular";
+import { useScroll } from "../ScrollContext";
 
 export const AboutMe = () => {
   const windowWidth = useRef(window.innerWidth);
-
+  const { section3Ref } = useScroll();
   return (
-    <Window margin={"50px 0 20px"} padding={"20px 16px 0px 16px"}>
+    <Window
+      margin={"50px auto 20px"}
+      padding={"20px 16px 0px 16px"}
+      ref={section3Ref}
+    >
       <TextMedium fontSize={20} align={"center"}>
         О себе
       </TextMedium>
-      <TextRegular fontSize={16} margin={"20px 0 "} align={"center"}>
+      <TextRegular
+        lineHeight={"30px"}
+        fontSize={18}
+        margin={"20px 16px "}
+        align={"justify"}
+      >
         Свой путь я выбрала еще в школе и ни разу не сомневалась в его
         правильности. Вникать, слушать, слышать и помогать - то, что я умею
         делать и что приносит мне удовольствие. Сейчас я - дипломированный

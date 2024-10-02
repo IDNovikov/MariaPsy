@@ -25,6 +25,7 @@ const Img = styled.img`
   height: 99%;
 `;
 const ArrowBack = styled.div`
+  cursor: pointer;
   position: absolute;
   display: flex;
   align-items: center;
@@ -41,6 +42,7 @@ const ArrowBack = styled.div`
   font-size: 30px;
 `;
 const ArrowNext = styled.div`
+  cursor: pointer;
   position: absolute;
   display: flex;
   align-items: center;
@@ -87,13 +89,13 @@ export default function SimpleSlider({ width, margin }) {
     <Container width={width} margin={margin} className="slider-container">
       <Slider {...settings}>
         <Item>
-          <Img src={q} />
-        </Item>
-        <Item>
           <Img src={w} />
         </Item>
         <Item>
           <Img src={e} />
+        </Item>
+        <Item>
+          <Img src={q} />
         </Item>
         <Item>
           <Img src={r} />

@@ -6,7 +6,7 @@ import { TextRegular } from "../common/TextRegular";
 import { Punkt } from "../common/Punkt";
 import { BlackWindow } from "../common/BlackWindow";
 import sub from "../assets/Subtract.svg";
-
+import { useScroll } from "../ScrollContext";
 const Link = styled.a`
   color: #7ab7ff;
   text-decoration: underline;
@@ -16,9 +16,9 @@ const Link = styled.a`
 
 export const Spec = () => {
   const windowWidth = useRef(window.innerWidth);
-
+  const { section1Ref } = useScroll();
   return (
-    <Window margin={"30px 0 "} padding={"0px 16px"}>
+    <Window margin={"30px auto "} padding={"0px 16px"} ref={section1Ref}>
       <TextMedium fontSize={20} align={"center"} margin={"20px 0 "}>
         С чем я работаю
       </TextMedium>
@@ -28,6 +28,7 @@ export const Spec = () => {
         color={"#ECECEC"}
         minHeight={50}
         children={"Низкая самооценка"}
+        margin={"10px 16px"}
       />
       <Punkt
         src={sub}
@@ -35,6 +36,7 @@ export const Spec = () => {
         color={"#ECECEC"}
         minHeight={50}
         children={"Нет цели, не знаю зачем живу"}
+        margin={"10px 16px"}
       />
       <Punkt
         src={sub}
@@ -42,6 +44,7 @@ export const Spec = () => {
         color={"#ECECEC"}
         minHeight={50}
         children={"Эмоциональная подавленность, ощущение «вакуума»"}
+        margin={"10px 16px"}
       />
       <Punkt
         src={sub}
@@ -49,6 +52,7 @@ export const Spec = () => {
         color={"#ECECEC"}
         minHeight={50}
         children={"Тревога без повода"}
+        margin={"10px 16px"}
       />
       <Punkt
         src={sub}
@@ -56,6 +60,7 @@ export const Spec = () => {
         align={"center"}
         color={"#ECECEC"}
         children={"Апатия"}
+        margin={"10px 16px"}
       />
       <Punkt
         src={sub}
@@ -63,6 +68,7 @@ export const Spec = () => {
         color={"#ECECEC"}
         minHeight={50}
         children={"Токсичные отношения, невозможность разрыва"}
+        margin={"10px 16px"}
       />
       <Punkt
         src={sub}
@@ -70,6 +76,7 @@ export const Spec = () => {
         color={"#ECECEC"}
         minHeight={50}
         children={"Нездоровая любовь"}
+        margin={"10px 16px"}
       />
       <Punkt
         src={sub}
@@ -77,6 +84,7 @@ export const Spec = () => {
         color={"#ECECEC"}
         minHeight={50}
         children={"Проблемы в отношениях с партнером"}
+        margin={"10px 16px"}
       />
       <Punkt
         src={sub}
@@ -84,6 +92,7 @@ export const Spec = () => {
         color={"#ECECEC"}
         minHeight={50}
         children={"Поиск ресурса"}
+        margin={"10px 16px"}
       />
       <Punkt
         src={sub}
@@ -91,13 +100,14 @@ export const Spec = () => {
         color={"#ECECEC"}
         minHeight={50}
         children={"Детско-родительские отношения"}
+        margin={"10px 16px"}
       />
       <BlackWindow margin={"15px 0"}>
         <TextRegular
           color={"white"}
           align={"left"}
           fontSize={14}
-          margin={"14px"}
+          margin={"14px 14px 20px"}
         >
           Если вы не нашли нужного пункта в списке, то{" "}
           <Link href="https://t.me/tenalponi">свяжитесь со мной</Link> и я

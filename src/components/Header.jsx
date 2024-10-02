@@ -2,7 +2,6 @@ import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import { MobileMenu } from "./MobileMenu";
 import Mary from "../assets/Mary.svg";
-
 import { Spin as Hamburger } from "hamburger-react";
 
 const HeaderWrapper = styled.div`
@@ -42,17 +41,19 @@ const Nav = styled.nav`
 export const Header = () => {
   const [isOpen, setOpen] = useState(true);
   const windowWidth = useRef(window.innerWidth);
-
+  const handleClose = () => {
+    setOpen(!isOpen);
+  };
   return (
     <>
       <HeaderWrapper>
         <Img src={Mary} />
 
-        <Burger onClick={() => setOpen(!isOpen)}>
+        <Burger onClick={() => handleClose()}>
           <Hamburger duration={0.8} />
         </Burger>
         <Nav isOpen={isOpen}>
-          <MobileMenu></MobileMenu>
+          <MobileMenu handleClose={handleClose}></MobileMenu>
         </Nav>
       </HeaderWrapper>
     </>

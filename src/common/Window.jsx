@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Window = styled.div`
   position: relative;
-  max-width: 1232px;
+  max-width: 550px;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -12,4 +12,5 @@ export const Window = styled.div`
   margin: ${(props) => props.margin};
   padding: ${(props) => props.padding};
   border-radius: 28px;
+  overflow: hidden;
 `;

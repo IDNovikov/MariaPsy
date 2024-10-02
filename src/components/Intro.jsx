@@ -6,6 +6,8 @@ import name from "../assets/otName.svg";
 import { TextMedium } from "../common/TextMedium";
 import { TextRegular } from "../common/TextRegular";
 import { Button } from "../common/Button";
+import { TextLogo } from "../common/TextLogo";
+import { DropDown } from "../common/DropDown";
 
 const Img = styled.img`
   position: absolute;
@@ -26,20 +28,16 @@ export const Intro = () => {
     <>
       <div style={{ padding: "50px 0 0 0", position: "relative" }}>
         <Img src={Avatar} />
-        <Window margin={"50px 0 20px"} padding={"100px 16px 16px 16px"}>
+        <Window margin={"50px auto 20px"} padding={"100px 16px 16px 16px"}>
           <TextMedium fontSize={20} align={"center"}>
-            Привет! Меня зовут Мария Новикова, я дипломированный
-            гештальт-терапевт, помогаю людям бороться с трудностями и находить в
-            себе ресурсы
+            Привет! Меня зовут{" "}
+            <TextLogo fontSize={26} color={"#FEA800"}>
+              <i>Мария Новикова</i>
+            </TextLogo>
+            , я дипломированный гештальт-терапевт, помогаю людям бороться с
+            трудностями и находить в себе ресурсы
           </TextMedium>
-          <Name src={name} />
-          <TextRegular fontSize={16} align={"center"}>
-            Работаю в феноменологическом подходе: феноменологический подход
-            акцентирует внимание не на поведении, а на том, что происходит у
-            человека в сознании человека: какие образы и ощущения возникают у
-            него и как он их чувствует. Под феноменом понимаются ощущения,
-            восприятия, представления и мысли
-          </TextRegular>
+          <DropDown marginHeader={"20px 0 10px 0"} />
           <Button maXwidth={600} height={44} margin={"15px 0"}></Button>
         </Window>
       </div>
